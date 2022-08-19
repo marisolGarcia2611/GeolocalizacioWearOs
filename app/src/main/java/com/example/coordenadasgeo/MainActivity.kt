@@ -64,7 +64,7 @@ class MainActivity : Activity() {
 
     private fun Peticion(latitud:Double,longitud:Double){
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.254.208:8000/api/insert"
+        val url = "http://192.168.137.1:8000/api/insert"
 
         var lat=latitud.toString()
         var lon=longitud.toString()
@@ -90,27 +90,4 @@ class MainActivity : Activity() {
 
     }
 
-//    private fun volley(latitud:Double,longitud:Double){
-//        val queue = Volley.newRequestQueue(this)
-//        val url = "http://192.168.80.217:8000/api/insert"
-//
-//        val JsonObject = JSONObject()
-//        JsonObject.put("latitud",latitud)
-//        JsonObject.put("longitud",longitud)
-//
-//        val jsonObjectRequest = JsonObjectRequest(
-//            Request.Method.POST,url,JsonObject,
-//            com.android.volley.Response.Listener { response ->
-//                Toast.makeText(this,response.toString(),Toast.LENGTH_SHORT).show()
-//                Log.e("data", response.toString())
-//            },
-//            com.android.volley.Response.ErrorListener { error ->
-//                Toast.makeText(this, error.toString(), Toast.LENGTH_SHORT).show()
-//                Log.e("error", error.toString())
-//                error.printStackTrace()
-//            }
-//        )
-//
-//        queue.add(jsonObjectRequest)
-//    }
 }
